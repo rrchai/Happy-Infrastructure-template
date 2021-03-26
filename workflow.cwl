@@ -50,7 +50,7 @@ steps:
     run: https://raw.githubusercontent.com/Sage-Bionetworks-Workflows/dockstore-tool-synapseclient/v1.3/cwl/synapse-get-tool.cwl
     in:
       - id: synapseid
-        valueFrom: "syn18081597"  # TODO: replace with your own workflow SynapseID
+        valueFrom: "syn25356005"  # TODO: replace with your own workflow SynapseID
       - id: synapse_config
         source: "#synapseConfig"
     out:
@@ -79,7 +79,7 @@ steps:
         source: "#validation/status"
       - id: invalid_reasons
         source: "#validation/invalid_reasons"
-      - id: errors_only  # remove this param if you would like to send "submission valid" emails as well.
+#      - id: errors_only  # remove this param if you would like to send "submission valid" emails as well.
         default: true
 
     out: [finished]
@@ -131,8 +131,8 @@ steps:
         source: "#synapseConfig"
       - id: results
         source: "#scoring/results"
-      # - id: private_annotations
-      #   default: []  # if there are scores that should not be returned to the participant, enter them here.
+      - id: private_annotations
+        default: []  # if there are scores that should not be returned to the participant, enter them here.
     out: []
 
   annotate_submission_with_output:
