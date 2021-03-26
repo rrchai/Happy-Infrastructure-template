@@ -50,7 +50,7 @@ steps:
     run: https://raw.githubusercontent.com/Sage-Bionetworks-Workflows/dockstore-tool-synapseclient/v1.3/cwl/synapse-get-tool.cwl
     in:
       - id: synapseid
-        valueFrom: "syn25356005"  # TODO: replace with your own workflow SynapseID
+        valueFrom: "syn25356488"  # TODO: replace with your own workflow SynapseID
       - id: synapse_config
         source: "#synapseConfig"
     out:
